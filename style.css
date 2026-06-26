@@ -1,0 +1,108 @@
+/* Reset and Base Styles for Responsive Design & Accessibility (4 Marks) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f4;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Fluid Container Layout */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2e7d32; /* Conservation Green */
+    margin-bottom: 20px;
+}
+
+/* Responsive Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Ensures video scales beautifully on all screens */
+video {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Accessible and Styled Button */
+.control-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.control-btn:hover {
+    background-color: #1b5e20;
+}
+
+/* Focus state for Keyboard/Screen Reader Accessibility */
+.control-btn:focus-visible {
+    outline: 3px solid #81c784;
+    outline-offset: 2px;
+}
+
+.control-btn:active {
+    transform: scale(0.98);
+}
+
+/* Utility class to hide the video container completely */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
+
+/* Responsive Media Query for smaller devices */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+}
